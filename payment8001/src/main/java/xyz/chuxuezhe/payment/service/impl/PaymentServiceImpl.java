@@ -7,7 +7,6 @@ import xyz.chuxuezhe.payment.service.PaymentService;
 
 import javax.annotation.Resource;
 
-
 @Service
 public class PaymentServiceImpl implements PaymentService {
     @Resource

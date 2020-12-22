@@ -20,9 +20,9 @@ import javax.annotation.Resource;
 @RequestMapping("/consumer")
 public class OrderController {
 
-    //        public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://localhost:8001";
     //集群负载均衡
-    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+//    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
     @Resource
     private RestTemplate restTemplate;
     @Resource
