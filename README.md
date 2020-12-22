@@ -2,6 +2,7 @@
 
 ## 技术要点
 java8+maven+git+NGINX+rabbitMQ+springboot2.0
+[!参考](https://github.com/acloudyh/springCloud)
 
 ## eureka 注册中心
 首先需要将环境变量配置好：java ,maven 然后,新增注册中心客户端项目,新增注册中心服务端项目,最后依次启动服务端项目和客户端项目
