@@ -1,4 +1,4 @@
-package xyz.chuxuezhe.pament.service;
+package xyz.chuxuezhe.payment.service;
 
 import xyz.chuxuezhe.commons.entities.payment.Payment;
 

@@ -1,4 +1,4 @@
-package xyz.chuxuezhe.pament;
+package xyz.chuxuezhe.payment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,9 @@
-package xyz.chuxuezhe.pament.service.impl;
+package xyz.chuxuezhe.payment.service.impl;
 
 import org.springframework.stereotype.Service;
 import xyz.chuxuezhe.commons.entities.payment.Payment;
-import xyz.chuxuezhe.pament.dao.PaymentDao;
-import xyz.chuxuezhe.pament.service.PaymentService;
+import xyz.chuxuezhe.payment.mapper.PaymentMapper;
+import xyz.chuxuezhe.payment.service.PaymentService;
 
 import javax.annotation.Resource;
 
@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 @Service
 public class PaymentServiceImpl implements PaymentService {
     @Resource
-    private PaymentDao paymentDao;
+    private PaymentMapper paymentDao;
 
     @Override
     public int create(Payment payment) {

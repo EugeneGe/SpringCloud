@@ -1,11 +1,11 @@
-package xyz.chuxuezhe.pament.controller;
+package xyz.chuxuezhe.payment.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import xyz.chuxuezhe.commons.entities.payment.CommonResult;
 import xyz.chuxuezhe.commons.entities.payment.Payment;
-import xyz.chuxuezhe.pament.service.PaymentService;
+import xyz.chuxuezhe.payment.service.PaymentService;
 
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
+@RequestMapping("/payment")
 public class PaymentController {
 
     @Resource
@@ -22,7 +23,7 @@ public class PaymentController {
 //    @Resource
 //    private DiscoveryClient discoveryClient;
 
-    @PostMapping(value = "/payment/create")
+    @PostMapping(value = "/create")
     public CommonResult create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         log.info("-------------插入结果:[{}]", result);
@@ -33,7 +34,7 @@ public class PaymentController {
         }
     }
 
-    @GetMapping(value = "/payment/get/{id}")
+    @GetMapping(value = "/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
         log.info("-------------查询结果:[{}]", payment);
@@ -44,7 +45,7 @@ public class PaymentController {
         }
     }
 
-//    @GetMapping(value = "/payment/discovery")
+//    @GetMapping(value = "/discovery")
 //    public Object getDiscovery() {
 //        List<String> services = discoveryClient.getServices();
 //        for (String service : services) {
@@ -62,7 +63,7 @@ public class PaymentController {
      *
      * @return
      */
-    @GetMapping(value = "/payment/lb")
+    @GetMapping(value = "/lb")
     public String getPaymentLB() {
         return serverPort;
     }
@@ -73,7 +74,7 @@ public class PaymentController {
      *
      * @return
      */
-    @GetMapping("/payment/feign/timeout")
+    @GetMapping("/feign/timeout")
     public String paymentFeignTimeOut() {
         try {
             TimeUnit.SECONDS.sleep(3);
@@ -88,7 +89,7 @@ public class PaymentController {
      *
      * @return
      */
-    @GetMapping("/payment/zipkin")
+    @GetMapping("/zipkin")
     public String paymentZipkin() {
         return "hi,I am payment_zipkin server fall back, welcome to";
     }

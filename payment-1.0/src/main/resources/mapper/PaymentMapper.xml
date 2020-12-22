@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-
-<mapper namespace="xyz.chuxuezhe.pament.dao.PaymentDao">
-    <insert id="create" parameterType="Payment" useGeneratedKeys="true"
-            keyProperty="id">
-        insert into payment(serial) values(#{serial});
-    </insert>
-
+<mapper namespace="xyz.chuxuezhe.payment.mapper.PaymentMapper">
     <resultMap id="BaseResultMap" type="xyz.chuxuezhe.commons.entities.payment.Payment">
         <id column="id" property="id" jdbcType="BIGINT"></id>
         <id column="serial" property="serial" jdbcType="VARCHAR"></id>
     </resultMap>
 
-    <select id="getPaymentById" parameterType="Long" resultMap="BaseResultMap">
-         select * from payment where id = #{id};
-    </select>
+    <insert id="create" parameterType="Payment" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into payment(serial)
+        values (#{serial});
+    </insert>
 
+    <select id="getPaymentById" parameterType="Long" resultType="xyz.chuxuezhe.commons.entities.payment.Payment">
+        select *
+        from payment
+        where id = #{id};
+    </select>
 </mapper>
 
 
