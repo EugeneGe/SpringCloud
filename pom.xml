@@ -12,6 +12,7 @@
         <module>payment-1.0</module>
         <module>commons</module>
         <module>order-1.0</module>
+        <module>eureka-server</module>
     </modules>
     <packaging>pom</packaging>
 
