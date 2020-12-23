@@ -1,7 +1,10 @@
 package xyz.chuxuezhe.order.lb.impl;
 
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.stereotype.Component;
 import xyz.chuxuezhe.order.lb.MyLoadBalancer;
+
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -37,9 +40,9 @@ public class MyLoadBalancerImpl implements MyLoadBalancer {
      * @param serviceInstances
      * @return
      */
-//    @Override
-//    public ServiceInstance instances(List<ServiceInstance> serviceInstances) {
-//        int index = getAndIncrement() % serviceInstances.size();
-//        return serviceInstances.get(index);
-//    }
+    @Override
+    public ServiceInstance instances(List<ServiceInstance> serviceInstances) {
+        int index = getAndIncrement() % serviceInstances.size();
+        return serviceInstances.get(index);
+    }
 }

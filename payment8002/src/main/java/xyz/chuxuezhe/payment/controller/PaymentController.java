@@ -2,12 +2,15 @@ package xyz.chuxuezhe.payment.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 import xyz.chuxuezhe.commons.entities.payment.CommonResult;
 import xyz.chuxuezhe.commons.entities.payment.Payment;
 import xyz.chuxuezhe.payment.service.PaymentService;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @RestController
@@ -19,8 +22,8 @@ public class PaymentController {
     private PaymentService paymentService;
     @Value("${server.port}")
     private String serverPort;
-//    @Resource
-//    private DiscoveryClient discoveryClient;
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @PostMapping(value = "/create")
     public CommonResult create(@RequestBody Payment payment) {
@@ -44,18 +47,18 @@ public class PaymentController {
         }
     }
 
-//    @GetMapping(value = "/discovery")
-//    public Object getDiscovery() {
-//        List<String> services = discoveryClient.getServices();
-//        for (String service : services) {
-//            log.info("----------element:" + service);
-//        }
-//        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-//        for (ServiceInstance instance : instances) {
-//            log.info("serviceId:[{}], 主机名称:[{}], 端口号:[{}], url地址:[{}]", instance.getServiceId(), instance.getHost(), instance.getPort(), instance.getUri());
-//        }
-//        return this.discoveryClient;
-//    }
+    @GetMapping(value = "/discovery")
+    public Object getDiscovery() {
+        List<String> services = discoveryClient.getServices();
+        for (String service : services) {
+            log.info("----------element:" + service);
+        }
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        for (ServiceInstance instance : instances) {
+            log.info("serviceId:[{}], 主机名称:[{}], 端口号:[{}], url地址:[{}]", instance.getServiceId(), instance.getHost(), instance.getPort(), instance.getUri());
+        }
+        return this.discoveryClient;
+    }
 
     /**
      * ribbon负载均衡 rule
