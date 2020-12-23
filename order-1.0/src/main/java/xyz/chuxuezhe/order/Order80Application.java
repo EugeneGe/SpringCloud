@@ -1,4 +1,4 @@
-package xyz.chuxuezhe.payment;
+package xyz.chuxuezhe.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,13 +6,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author EugeneGe
- * @date 2020-12-21 17:22
+ * @date 2020-12-22 10:41
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class PaymentMain8001 {
+public class Order80Application {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8001.class, args);
+        SpringApplication.run(Order80Application.class, args);
     }
-
 }

@@ -10,6 +10,9 @@ import xyz.chuxuezhe.payment.service.PaymentService;
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author EugeneGe
+ */
 @RestController
 @Slf4j
 @RequestMapping("/payment")
