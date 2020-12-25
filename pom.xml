@@ -17,6 +17,8 @@
         <module>payment8002</module>
         <module>payment8004</module>
         <module>order-1.1</module>
+        <module>payment8006</module>
+        <module>order-1.2</module>
     </modules>
     <packaging>pom</packaging>
 
