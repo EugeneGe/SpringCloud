@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="payment8002" />
         <module name="order-1.0" />
+        <module name="payment8004" />
+        <module name="order-1.1" />
         <module name="eureka-server7002" />
         <module name="eureka-server" />
         <module name="payment8001" />
