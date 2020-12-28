@@ -1,0 +1,7 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: cloud-authority-service
+  profiles:
+    active: dev

@@ -9,4 +9,4 @@ spring:
   cloud:
     # zookeeper的地址
     zookeeper:
-      connect-string: 127.0.0.1:2181
+      connect-string: 172.29.105.216:2181

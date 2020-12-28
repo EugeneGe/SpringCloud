@@ -13,6 +13,7 @@
         <module name="payment8004" />
         <module name="order-1.1" />
         <module name="payment8006" />
+        <module name="authority" />
         <module name="eureka-server7002" />
         <module name="eureka-server" />
         <module name="payment8001" />

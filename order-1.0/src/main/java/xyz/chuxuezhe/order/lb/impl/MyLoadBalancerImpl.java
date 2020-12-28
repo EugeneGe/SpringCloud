@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 实现自定义选择 算法
+ *
  * @author EugeneGe
  * @description
  * @date 2020-09-16 15:00
  */
-@Component //让容器扫描到这个类
+@Component
 public class MyLoadBalancerImpl implements MyLoadBalancer {
 
     private AtomicInteger atomicInteger = new AtomicInteger(0);
