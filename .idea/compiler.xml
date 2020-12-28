@@ -9,16 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="order-1.2" />
         <module name="payment8002" />
+        <module name="order-1.3" />
         <module name="order-1.0" />
         <module name="payment8004" />
         <module name="order-1.1" />
         <module name="payment8006" />
+        <module name="eureka-server" />
+        <module name="commons" />
         <module name="authority" />
         <module name="eureka-server7002" />
-        <module name="eureka-server" />
         <module name="payment8001" />
         <module name="gateway" />
-        <module name="commons" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
