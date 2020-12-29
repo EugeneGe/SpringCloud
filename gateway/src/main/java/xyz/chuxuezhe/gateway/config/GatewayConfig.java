@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author Yang Hao
+ * @author EugeneGe
  * @description 编码的方式
- *              官网 https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.1.RELEASE/reference/html/#gatewayfilter-factories
+ * 官网 https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.1.RELEASE/reference/html/#gatewayfilter-factories
  * @date 2020-09-18 16:55
  */
-//@Configuration
+@Configuration
 public class GatewayConfig {
 
     /**
