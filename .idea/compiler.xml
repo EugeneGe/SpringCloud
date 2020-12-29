@@ -17,6 +17,7 @@
         <module name="eureka-server" />
         <module name="commons" />
         <module name="order-1.4" />
+        <module name="order-1.5" />
         <module name="payment8001-hystrix" />
         <module name="authority" />
         <module name="eureka-server7002" />
