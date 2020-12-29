@@ -13,11 +13,13 @@ import reactor.core.publisher.Mono;
 import java.util.Date;
 
 /**
+ * Ordered 加载过滤器的顺序,值越小,越早
+ *
  * @author EugeneGe
  * @description 自定义全局GlobalFilter
  * @date 2020-09-18 17:49
  */
-//@Component
+@Component
 @Slf4j
 public class MyLogGateWayFilter implements GlobalFilter, Ordered {
 
