@@ -11,6 +11,8 @@ import xyz.chuxuezhe.order.service.PaymentHystrixService;
 import javax.annotation.Resource;
 
 /**
+ * DefaultProperties 全局通用降级方法
+ *
  * @author EugeneGe
  */
 @RestController
